@@ -20,6 +20,6 @@ Now you can run your image typing ```docker run -p 8000:newPortNumber -v compute
 
 An example for your computer path is: `/Users/Username/Desktop`. 
 
-So, if you decided to share your `/Users/Username/Desktop` path and your json files are stored in `/Users/Username/Desktop/FolderContainingJson`, when you want to point to **FolderContainingJson** you have to use `/microservice/shared/FolderContainingJson` because `/microservice/shared` corresponds to `/Users/Username/Desktop`.
+So, if you decided to share your `/Users/Username/Desktop` path and your json files are stored in `/Users/Username/Desktop/FolderContainingJson`, when you want to point to **FolderContainingJson** you have to use `/microservice/shared/FolderContainingJson` because `/microservice/shared` corresponds to `/Users/Username/Desktop` on your docker image.
 
 Open your browser and go to : ```http://localhost:portNumber/index.html```
