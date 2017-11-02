@@ -13,7 +13,7 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 */
-include "/www/jolie/FrontendInterface.iol"
+include "/jolie/FrontendInterface.iol"
 include "console.iol"
 include "file.iol"
 include "string_utils.iol"
@@ -50,7 +50,7 @@ Aggregates: FrontendPort
 
 
 embedded {
-	Jolie: "/www/jolie/frontend.ol" in FrontendPort
+	Jolie: "/jolie/frontend.ol" in FrontendPort
 }
 
 init

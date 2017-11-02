@@ -508,7 +508,7 @@
         mergingArray = arrayToParse;
         tempTableMerged = arrayToParse;
         for (var i = 0; i < tempTableMerged.length; i++) {
-            var date = tempTableMerged[i].Timestamp.substr(0, 6) + "20" + tempTableMerged[i].Timestamp.substr(0, 2);
+            var date = tempTableMerged[i].Timestamp.substr(0, 6) + "20" + tempTableMerged[i].Timestamp.substr(6, 2);
             var hour = tempTableMerged[i].Timestamp.substr(9);
             var hours = hour.substr(0, 2);
             var minutes = hour.substr(3, 2);
@@ -777,8 +777,10 @@
     function parseFileList() {
         var tempTotalResults = totalResults;
         for (var i = 0; i < tempTotalResults.filesList.length; i++) {
-            var date = tempTotalResults.filesList[i].fileName.substr(0, 6) + "20" + tempTotalResults.filesList[i].fileName.substr(6, 2);
-            var hour = tempTotalResults.filesList[i].fileName.substr(11, 12);
+            var Zdate = tempTotalResults.filesList[i].fileName.substr(0, 6) + "20" + tempTotalResults.filesList[i].fileName.substr(6, 2);
+            var date = tempTotalResults.filesList[i].fileName.substr(0, 4) + "20" + tempTotalResults.filesList[i].fileName.substr(4, 2);
+            var Zhour = tempTotalResults.filesList[i].fileName.substr(11, 12);
+            var hour = tempTotalResults.filesList[i].fileName.substr(7, 12);
             var hours = hour.substr(0, 2);
             var minutes = hour.substr(3, 2);
             var seconds = hour.substr(6, 2);

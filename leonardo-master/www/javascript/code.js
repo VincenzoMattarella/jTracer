@@ -84,23 +84,6 @@ var Jolie = {
       }
     })
   }
-
-  /*,
-
-	// Calls an operation at the specified
-	// service published by the originating server using JSON
-	callService: function( service, operation, data, callback ) {
-		$.ajax({
-			url: '/!/' + service + '!/' + operation,
-			dataType: 'json',
-			type: 'POST',
-			contentType: 'application/json',
-			success: callback,
-			data: JSON.stringify( data )
-		});
-	},
-	widgets: {}
-*/
 };
 
 
