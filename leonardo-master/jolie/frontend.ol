@@ -80,7 +80,7 @@ main
   [
     saveNewPath(request)(response){
       format = "json";
-      file.filename = global.path; //"/microservice/www/config/pathlist.json";
+      file.filename = global.path;
       readFile@File(file)(text);
       getJsonValue@JsonUtils(text)(res);
       length = #res.("_");
@@ -94,7 +94,7 @@ main
         res.("_")[length].path = request.path;
         getJsonString@JsonUtils(res)(testo);
         writingVar.content = testo;
-        writingVar.filename = global.path;//"/microservice/www/config/pathlist.json";
+        writingVar.filename = global.path;
         writeFile@File(writingVar)();
         response = true
       } else{
@@ -105,7 +105,7 @@ main
   [
     deletePath(request)(response){
       format = "json";
-      file.filename = global.path;//"/microservice/www/config/pathlist.json";
+      file.filename = global.path;
       readFile@File(file)(text);
       getJsonValue@JsonUtils(text)(res);
       for (element in request.pathValue){
@@ -117,7 +117,7 @@ main
       };
       getJsonString@JsonUtils(res)(testo);
       writingVar.content = testo;
-      writingVar.filename = global.path;//"/microservice/www/config/pathlist.json";
+      writingVar.filename = global.path;
       writeFile@File(writingVar)();
       response = true
     }
